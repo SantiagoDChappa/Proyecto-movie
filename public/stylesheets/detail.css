@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 21px;
+  }
+  
+  @media (min-width: 1200px){
+    header{
+      background-color: #fae7d7;
+      padding: 3%;
+    }
+    header h1{
+      margin: 0;
+      font-size: 42px;
+    }
+    main h1, main p, main h4 {
+      padding-left: 2%;
+    }
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .navbar > a:nth-child(1) {
+      width: 20%;
+    }
+    .navbar > a:nth-child(2) {
+      align-self: center;
+    }
+}
+.bottoms form button {
+        background-color: #ff3232a3;
+        border: 1px solid #000;
+        border-radius: 6px;
+        padding: 5px;
+        margin-top: 1%;
+        font-size: 20px;
+}
+.bottoms a {
+        background-color: #ffb300b3;
+        border: 1px solid #000;
+        border-radius: 6px;
+        padding: 6px;
+}
+.bottoms {
+        margin: 4% 2%;
+}

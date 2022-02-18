@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link rel='stylesheet' href='/stylesheets/profile.css'/>
+    <title>Perfil</title>
+</head>
+<body>
+    <header>
+        <a href="/"><h1>WikiPelis</h1></a>
+    </header>
+    <main>
+        <h1><%= user.name %></h1>
+        <h4>Email: <%= user.email %></h4>
+        <h4>Usuario:
+            <% if(user.rol == 0){ %>
+                Regular
+            <% }else if(user.rol == 1){ %>
+                Administrador
+            <% } %> 
+        </h4>
+    </main>
+</body>
+</html>

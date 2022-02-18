@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 21px;
+  }
+  
+  @media (min-width: 1200px){
+    header{
+      background-color: #fae7d7;
+      padding: 3%;
+    }
+    header h1{
+      margin: 0;
+      font-size: 42px;
+    }
+    main h1, main p, main h4 {
+      padding-left: 2%;
+    }
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .navbar > a:nth-child(1) {
+      width: 20%;
+    }
+    .navbar > a:nth-child(2) {
+      align-self: center;
+    }
+}
+body > form:nth-child(2) {
+    margin: 3%;
+    line-height: 33px;
+    font-size: 20px;
+   }
+   form input {
+    border: 1px solid #ababab;
+    border-radius: 6px;
+    padding: 4px;
+  }
+  body > form:nth-child(2) > button:nth-child(19) {
+    background-color: #00800096;
+    border: 1px solid #111;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+   }
+   body > form:nth-child(2) > button:nth-child(20) {
+    background-color: #ff3232a3;
+    border: 1px solid #111;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+   }
+   .actors > h4:nth-child(3) {
+    align-self: center;
+    margin-left: 1%;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+    background-color: #47c047;
+   }
+   .actors > label:nth-child(1) {
+    /*! height: 13px; */align-self: center;
+    margin-right: 1%;
+   }
+   #name {
+    height: 0%;
+    align-self: center;
+   }
+   .actors {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+   }
+   h2{
+    margin-bottom: 0;
+   }
+   .row {
+    margin-right: 1%;
+   }
+   .botton-agregar {
+    width: 70%;
+   }
+  .row select {
+    margin-left: 34%;
+    margin-top: 3%;
+   }
+   .bottoms form button {
+    cursor: pointer;
+    } 
+   

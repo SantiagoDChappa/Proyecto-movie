@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link rel='stylesheet' href='/stylesheets/register.css'/>
+    <title>Registro</title>
+</head>
+<body>
+    <header>
+        <a href="/"><h1>WikiPelis</h1></a>
+    </header>
+    <main>
+        <h1>REGISTRARSE</h1>
+        <form action="/users/register" method="POST">
+            <div class="inputs">
+            <label for="name">Nombre completo:</label>
+            <input type="text" name="name" id="name" value="<%= locals.oldBody && oldBody.name ? oldBody.name : ''%>">
+            <% if(locals.errors && errors.name){ %>
+                <ul>
+                    <li class="error-register"><%= errors.name.msg %></li>
+                </ul>  
+            <% } %>
+            </div>
+
+            <div class="inputs">
+            <label for="email">Correo electronico:</label>
+            <input type="email" name="email" id="email" value="<%= locals.oldBody && oldBody.email ? oldBody.email : ''%>">
+            <% if(locals.errors && errors.email){ %>
+                <ul>
+                    <li class="error-register"><%= errors.email.msg %></li>
+                </ul>  
+            <% } %>
+            </div>
+            
+            <div class="inputs">
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" id="password">
+            <% if(locals.errors && errors.password){ %>
+                <ul>
+                    <li class="error-register"><%= errors.password.msg %></li>
+                </ul>  
+            <% } %>
+            </div>
+
+            <label for="rol">Rol del usuario:</label>
+            <select name="rol" id="rol">
+                <option value="0" selected>Regular</option>
+                <option value="1">Administrador</option>
+            </select>
+            <br>
+
+            <button type="submit">REGISTRARSE</button>
+        </form>
+    </main>
+</body>
+</html>

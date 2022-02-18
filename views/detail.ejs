@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link rel='stylesheet' href='/stylesheets/detail.css'/>
+    <title><%= movie.title %></title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="/"><h1>WikiPelis</h1></a>
+        </div>
+    </header>
+    <main>
+            <h1><%= movie.title %></h1>
+            <p>Rating: <%= movie.rating %></p>
+            <p>Premios: <%= movie.awards %></p>
+
+        <% if(movie.length){ %> 
+            <p>Duracion: <%= movie.length %> min</p>
+        <% }else{ %>
+            <p>Duracion: NULO</p>    
+        <% } %>  
+
+        <% if(movie.release_date){ %> 
+            <p>Fecha de estreno: <%= movie.release_date %></p>
+        <% }else{ %>
+            <p>Fecha de estreno: NULO</p>
+        <% } %> 
+
+        <% if(movie.genres){ %> 
+            <p>Genero: <%= movie.genres.name %></p>
+        <% }else{ %>
+            <p>Genero: NULO</p>
+        <% } %> 
+            
+            <h4>Listado de actores</h4>
+        <ul>
+            <% for(let i=0; i < movie.actors.length; i++){ %>
+                    <li><%= movie.actors[i].first_name %> <%= movie.actors[i].last_name %></li>
+            <% } %>  
+        </ul>
+        <% if(user){ %> 
+            <% if(user.rol == 1){ %> 
+            <div class="bottoms">
+                <a href="/movies/edit/<%= movie.id %>">EDITAR PELICULA</a>
+                <form action="/movies/<%= movie.id %>/delete" method="POST">
+                    <button>ELIMINAR PELICULA</button>
+                </form>
+            </div>
+            <% } %>
+        <% } %>
+    </main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('partials/head.ejs') %>
+    <link rel='stylesheet' href='/stylesheets/home.css' />
+    <title>WikiPelis</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="/"><h1>WikiPelis</h1></a>
+      <% if(!user){ %> 
+        <a href="/users/register" id="register">REGISTRO</a>
+        <a href="/users/login" id="login">INICIAR SESIÓN</a>
+      <% }else{ %>
+        <a href="/users/<%= user.id %>" id="perfill"><h1 id="perfil">PERFIL: <%= user.name %></h1></a>
+        <form action="/users/logout" method="POST">
+          <button type="submit">CERRAR SESION</button>
+        </form>
+      <% } %>  
+      </div>
+    </header>
+    <main>
+          <h1>Listado de peliculas</h1>
+        <ul>
+          <% for(let i = 0; i < movies.length ; i++){ %>
+              <li><a href="/movies/<%= movies[i].id %>"><%= movies[i].title %></a></li>
+          <% } %>
+        </ul>
+          <% if(user && user.rol == 1){ %> 
+            <div class="bottom-create">
+              <a href="/movies/create">CREAR PELICULA</a>
+            </div>
+          <% } %>
+    </main>
+  </body>
+</html>
