@@ -8,3 +8,5 @@ Los temas que se utilizaron en el proyecto fue:
 
 La tematica del trabajo practico consistia en una pagina web que se centra en el manejo de React y SQL haciendo llamados a una base de datos donde se puede crear, modificar y eliminar peliculas.
 El trabajo fue aprobado permitiendo terminar el curso y obteniendo el diploma de Desarrollador Web Full Stack de Digital House
+
+[Programacion Web Full Stack - Certificado - Digital House.pdf](https://github.com/user-attachments/files/16607423/Programacion.Web.Full.Stack.-.Certificado.-.Digital.House.pdf)
